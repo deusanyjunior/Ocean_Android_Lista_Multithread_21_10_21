@@ -15,5 +15,22 @@ class MainActivity : AppCompatActivity() {
         rvPessoas.layoutManager = LinearLayoutManager(this)
 
         // Adapter
+        val elvis = Persona(
+            "Elvis Presley",
+            "https://gpslifetime.com.br/uploads/content_manager/contents/58931/image/graceland-mansao-de-elvis-presley-ja-tem-data-de-reabertura-45c3.png",
+            "Rei do Rock!")
+        val michael = Persona(
+            "Michael Jackson",
+            "https://e-cdn-images.dzcdn.net/images/artist/86b13342a65ffe06fa151ce353a7b278/264x264-000000-80-0-0.jpg",
+            "Rei do Pop!")
+        val pele = Persona(
+            "Pelé",
+            "https://www.gazetaesportiva.com/wp-content/uploads/imagem/2020/04/24/url-906x1024.jpeg",
+            "Rei do Futebol!")
+
+        val itens = listOf(elvis,michael,pele)
+
+        rvPessoas.adapter = ItemAdapter(itens)
+
     }
 }
