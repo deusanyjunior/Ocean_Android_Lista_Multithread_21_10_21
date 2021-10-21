@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             "https://www.gazetaesportiva.com/wp-content/uploads/imagem/2020/04/24/url-906x1024.jpeg",
             "Rei do Futebol!")
 
-        val itens = listOf(elvis,michael,pele)
+        val itens = listOf(elvis,michael,pele,elvis,michael,pele,elvis,michael,pele,elvis,michael,pele)
 
         rvPessoas.adapter = ItemAdapter(itens)
 
