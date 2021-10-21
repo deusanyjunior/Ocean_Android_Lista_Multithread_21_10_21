@@ -1,11 +1,16 @@
 package com.oceanbrasil.android.ocean_android_lista_multithread_21_10_21
 
+import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.telephony.ServiceState
+import android.widget.Button
+import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,5 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         rvPessoas.adapter = ItemAdapter(itens)
 
+        val botao = findViewById<Button>(R.id.button)
+
+        botao.setOnClickListener {
+            TaskAssincrona().execute()
+        }
     }
 }
